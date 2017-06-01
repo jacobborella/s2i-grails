@@ -1,5 +1,5 @@
 # grails-demo
-This project demoes how to create a gradle source to image (s2i) build. Be aware of the following restrictions:
+This project demoes how to create a grails source to image (s2i) build. Be aware of the following restrictions:
 * Produced image is based on centos, which isn't for production use. I've used it for your convenience.
 * The image only works for jar files. grails assemble must produce one and only one jar file in the build/libs folder.
 
