@@ -26,6 +26,11 @@ To run the s2i in OpenShift, create the docker image from the Dockerfile on the 
 oc new-project demo
 oc new-app grails-centos7~https://github.com/jacobborella/grails-demo
 ```
+Alternatively the folder *ocp-templates* contains a template called *grails-s2i.yaml* for deploying a grails application in OpenShift using the image. To make it available, use
+```
+oc create -f grails-s2i.yaml -n openshift
+```
+Now the template will be available in the GUI or you can use *oc process* from the command line.
 
 References:
 * https://blog.openshift.com/create-s2i-builder-image/
