@@ -1,5 +1,9 @@
 # grails-demo
-This is a demo of running grails on OpenShift. The demo requires a grails source-to-image image, which can be made in the following steps:
+This project demoes how to create a gradle source to image (s2i) build. Be aware of the following restrictions:
+* Produced image is based on centos, which isn't for production use. I've used it for your convenience.
+* The image only works for jar files. grails assemble must produce one and only one jar file in the build/libs folder.
+
+To make the s2i builder available, run the following commands on the machine, where your docker installation resides:
 ```
 cd s2i-grails
 docker build -t grails-centos7 .
@@ -7,7 +11,7 @@ docker build -t grails-centos7 .
 
 This will create the s2i image
 
-You can then run an image with the following commands
+You can then run an image with the following commands locally
 ```
 s2i build https://github.com/jacobborella/grails-demo grails-centos7 grails-app
 docker run -p 8080:8080 grails-app
