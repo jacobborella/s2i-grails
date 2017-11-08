@@ -25,10 +25,14 @@ This will create the s2i image
 You can then run an image with the following commands locally
 ```
 s2i build https://github.com/jacobborella/grails-demo grails-centos7 grails-app
-docker run -p 8080:8080 grails-app
+docker run -d -p 8080:8080 grails-app
 ```
-
 This will start up a container with the source code installed. You can of course also refer to your own source repo instead. Mine is just added for convenience.
+
+Then you should be able to access the service, if using my code:
+```
+curl localhost:8080
+```
 
 To run the s2i in OpenShift, create the docker image from the Dockerfile on the server, which hosts the OpenShift registry. Alternatively use *docker save* to export the image from your local machine and *docker load* to import it into the OpenShift registry. Then build the application in the following steps:
 
