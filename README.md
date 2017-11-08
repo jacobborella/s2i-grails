@@ -9,7 +9,11 @@ Install:
 * Java (OpenJDK or Oracle distro, should work with both)
 * Docker CE (https://www.docker.com/)
 * s2i (https://github.com/openshift/source-to-image)
+* git (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
+Then clone this project to a prefered place on your computer.
+
+## Walk through
 To make the s2i builder available, run the following commands on the machine, where your docker installation resides:
 ```
 cd s2i-grails
