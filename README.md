@@ -14,7 +14,7 @@ Install:
 Then clone this project to a prefered place on your computer.
 
 ## Walk through
-To make the s2i builder available, run the following commands on the machine, where your docker installation resides:
+To make the s2i builder available, run the following commands, starting from the path you cloned the git repo to:
 ```
 cd s2i-grails
 docker build -t grails-centos7 .
