@@ -1,8 +1,14 @@
 # grails-s2i
 This project demoes how to create a grails source to image (s2i) build. Be aware of the following restrictions:
-* Produced image is based on centos, which isn't for production use. I've used it for your convenience.
+* Produced image is based on centos, and isn't for production use. I've used it for your convenience.
 * The image only works for jar files.
 * *grails assemble* must produce one and only one jar file in the build/libs folder.
+
+## Prerequisites
+Install:
+* Java (OpenJDK or Oracle distro, should work with both)
+* Docker CE (https://www.docker.com/)
+* s2i (https://github.com/openshift/source-to-image)
 
 To make the s2i builder available, run the following commands on the machine, where your docker installation resides:
 ```
